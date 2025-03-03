@@ -31,21 +31,36 @@ function createProductTemplate({imageUrl, name, brand, description, price}){
 
     const prodCard = document.createElement('div');
     prodCard.classList.add('text-center')
+    prodCard.style.border = "2px solid black"
+    prodCard.style.width = "50%"
+    prodCard.style.height = "500px"
 
     const imagePost = document.createElement("img")
     imagePost.src = imageUrl
+    imagePost.style.width = "300px"
+    imagePost.style.height = "300px"
 
     const namePost = document.createElement("h4")
-    namePost.innerText = name
+    namePost.innerText = "Name:" + " " + name
+    namePost.style.fontSize = "35pt"
+    namePost.style.fontWeight = "bold"
+    
 
     const brandPost = document.createElement("h5")
-    brandPost.innerText = brand
+    brandPost.innerText = "Brand:" + " " + brand
+    brandPost.style.fontSize = "30pt"
+    brandPost.style.fontWeight = "bold"
 
     const pricePost = document.createElement("h5")
-    pricePost.innerText = price
+    pricePost.innerText = "Price:" + " " + price + "€"
+    pricePost.style.fontSize = "30pt"
+    pricePost.style.fontWeight = "bold"
 
     const descriptionPost = document.createElement("p")
-    descriptionPost.innerText = description
+    descriptionPost.innerText = "Description:" + " " + description
+    descriptionPost.style.fontSize = "15pt"
+    descriptionPost.style.fontWeight = "regular"
+    
 
     prodCard.append(imagePost, namePost, brandPost, pricePost, descriptionPost)
 

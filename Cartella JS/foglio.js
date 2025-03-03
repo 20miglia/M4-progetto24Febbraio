@@ -55,11 +55,12 @@ function createCard({imageUrl, name, price, _id}){
    productName.classList.add("fs-4", "fw-bold", "fst-italic")
 
    const productPrice = document.createElement("h6");
-   productPrice.innerText = price
+   productPrice.innerText = "Price:" + " " + price + "€"
    productPrice.className = "fs-5 fw-medium"
 
    const detailProduct = document.createElement("a")
    detailProduct.innerText = "Product details" 
+   detailProduct.className = "btn btn-dark btn-sm"
     detailProduct.setAttribute('href', `details.html?id=${_id}`);
    
 
